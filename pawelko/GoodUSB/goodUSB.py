@@ -43,7 +43,7 @@ def KeyDown(event):
     if caught:
         caught = True
         return found(event)
-    elif len(history_array) > history and not caught:
+    elif len(history_array) > history:
         history_array.pop(0)
         time_total = sum(history_array) / history
         if time_total < threshold:
