@@ -80,7 +80,6 @@ class GameScene2 extends Phaser.Scene {
 
     // spike
     this.spike = this.physics.add.staticGroup()
-
     this.spike.create(100, 1040, 'scene3_spike')
     this.spike.create(200, 1040, 'scene3_spike')
     this.spike.create(300, 1040, 'scene3_spike')
@@ -159,7 +158,6 @@ class GameScene2 extends Phaser.Scene {
     this.physics.add.collider(this.coin, this.spike)
     
     // collision between spikes and checkpoint and platforms
-    this.physics.add.collider(this.checkpoint, this.platforms)
     this.physics.add.collider(this.portal, this.platforms)
 
     // collision between the player and coins
