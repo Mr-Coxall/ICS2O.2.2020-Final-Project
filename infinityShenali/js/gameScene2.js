@@ -51,67 +51,82 @@ class GameScene2 extends Phaser.Scene {
 
     this.scoreText = this.add.text(10, 10, 'Score: ' + this.score.toString(), this.scoreTextStyle)
 
-    this.text1 = this.add.text(0, 10, 'Use left, right, keys to move. Press the spacebar to jump.', this.scoreTextStyle)
-    this.text1.visible = false
-
     // platforms
     this.platforms = this.physics.add.staticGroup()
     this.platforms.create(100, 250, 'scene3_ground')
-    this.platforms.create(292, 250, 'scene3_ground')
-    this.platforms.create(484, 250, 'scene3_ground')
-    this.platforms.create(676, 250, 'scene3_ground')
-    this.platforms.create(868, 250, 'scene3_ground')
-    this.platforms.create(1060, 250, 'scene3_ground')
-    this.platforms.create(1252, 250, 'scene3_ground')
-    this.platforms.create(1444, 250, 'scene3_ground')
-    
-    this.platforms.create(1820, 520, 'scene3_ground')
-    this.platforms.create(1628, 520, 'scene3_ground')
-    this.platforms.create(1436, 520, 'scene3_ground')
-    this.platforms.create(1244, 520, 'scene3_ground')
-    this.platforms.create(1052, 520, 'scene3_ground')
-    this.platforms.create(860, 520, 'scene3_ground')
-    this.platforms.create(668, 520, 'scene3_ground')
-    this.platforms.create(476, 520, 'scene3_ground')
+    this.platforms.create(292, 437.5, 'scene3_ground')
+    this.platforms.create(484, 625, 'scene3_ground')
+    this.platforms.create(676, 812.5, 'scene3_ground')
+    this.platforms.create(868, 1000, 'scene3_ground')
+    this.platforms.create(1040, 1000, 'scene3_ground')
+    this.platforms.create(1252, 812.5, 'scene3_ground')
+    this.platforms.create(1444, 625, 'scene3_ground')
+    this.platforms.create(1636, 437.5, 'scene3_ground')
+    this.platforms.create(1828, 250, 'scene3_ground')
 
-    this.platforms.create(100, 790, 'scene3_ground')
-    this.platforms.create(292, 790, 'scene3_ground')
-    this.platforms.create(484, 790, 'scene3_ground')
-    this.platforms.create(676, 790, 'scene3_ground')
-    this.platforms.create(868, 790, 'scene3_ground')
-    this.platforms.create(1060, 790, 'scene3_ground')
-    this.platforms.create(1252, 790, 'scene3_ground')
-    this.platforms.create(1444, 790, 'scene3_ground')
-
-    // checkpoint
-    this.checkpoint = this.physics.add.sprite (1800, 400, 'scene3_checkpoint')
+    this.platforms.create(100, 1080, 'scene3_ground')
+    this.platforms.create(292, 1080, 'scene3_ground')
+    this.platforms.create(484, 1080, 'scene3_ground')
+    this.platforms.create(676, 1080, 'scene3_ground')
+    this.platforms.create(868, 1080, 'scene3_ground')
+    this.platforms.create(1040, 1080, 'scene3_ground')
+    this.platforms.create(1252, 1080, 'scene3_ground')
+    this.platforms.create(1444, 1080, 'scene3_ground')
+    this.platforms.create(1636, 1080, 'scene3_ground')
+    this.platforms.create(1828, 1080, 'scene3_ground')
 
     // portal
-    this.portal = this.physics.add.sprite (1500, 670, 'scene3_portal')
+    this.portal = this.physics.add.sprite (1828, 125, 'scene3_portal')
 
     // spike
     this.spike = this.physics.add.staticGroup()
 
-    this.spike.create(900, 205, 'scene3_spike')
-    this.spike.create(1300, 205, 'scene3_spike')
-
-    this.spike.create(1200, 475, 'scene3_spike')
-    this.spike.create(1190, 475, 'scene3_spike')
-    this.spike.create(890, 475, 'scene3_spike')
-
-    this.spike.create(500, 745, 'scene3_spike')
+    this.spike.create(100, 1040, 'scene3_spike')
+    this.spike.create(200, 1040, 'scene3_spike')
+    this.spike.create(300, 1040, 'scene3_spike')
+    this.spike.create(400, 1040, 'scene3_spike')
+    this.spike.create(500, 1040, 'scene3_spike')
+    this.spike.create(600, 1040, 'scene3_spike')
+    this.spike.create(700, 1040, 'scene3_spike')
+    this.spike.create(800, 1040, 'scene3_spike')
+    this.spike.create(900, 1040, 'scene3_spike')
+    this.spike.create(1000, 1040, 'scene3_spike')
+    this.spike.create(1100, 1040, 'scene3_spike')
+    this.spike.create(1200, 1040, 'scene3_spike')
+    this.spike.create(1390, 1040, 'scene3_spike')
+    this.spike.create(1400, 1040, 'scene3_spike')
+    this.spike.create(1500, 1040, 'scene3_spike')
+    this.spike.create(1600, 1040, 'scene3_spike')
+    this.spike.create(00, 1040, 'scene3_spike')
+    this.spike.create(800, 1040, 'scene3_spike')
+    this.spike.create(350, 1040, 'scene3_spike')
+    this.spike.create(1590, 1040, 'scene3_spike')
+    this.spike.create(1650, 1040, 'scene3_spike')
+    this.spike.create(1700, 1040, 'scene3_spike')
+    this.spike.create(150, 1040, 'scene3_spike')
+    this.spike.create(250, 1040, 'scene3_spike')
+    this.spike.create(1790, 1040, 'scene3_spike')
+    this.spike.create(290, 1040, 'scene3_spike')
+    this.spike.create(690, 1040, 'scene3_spike')
+    this.spike.create(650, 1040, 'scene3_spike')
+    this.spike.create(670, 1040, 'scene3_spike')
+    this.spike.create(680, 1040, 'scene3_spike')
+    this.spike.create(290, 1040, 'scene3_spike')
 
     // coin
     this.coin = this.physics.add.staticGroup()
-    this.coin.create(1190, 430, 'scene3_coin')
-    this.coin.create(1090, 430, 'scene3_coin')
-    this.coin.create(990, 430, 'scene3_coin')
-    this.coin.create(890, 430, 'scene3_coin')
-    this.coin.create(790, 430, 'scene3_coin')
-    this.coin.create(690, 430, 'scene3_coin')
+    this.coin.create(1190, 630, 'scene3_coin')
+    this.coin.create(718, 630, 'scene3_coin')
+    this.coin.create(618, 442.5, 'scene3_coin')
+    this.coin.create(859, 442.5, 'scene3_coin')
+    this.coin.create(1049, 442.5, 'scene3_coin')
+    this.coin.create(1290, 442.5, 'scene3_coin')
+    this.coin.create(954, 817.5, 'scene3_coin')
+    this.coin.create(1169.5, 255, 'scene3_coin')
+    this.coin.create(738.5, 255, 'scene3_coin')
 
     // player
-    this.player = this.physics.add.sprite (100, 199, 'scene3_squareSprite');
+    this.player = this.physics.add.sprite (100, 150, 'scene3_squareSprite');
 
     this.player.setCollideWorldBounds(true);
 
@@ -175,7 +190,7 @@ class GameScene2 extends Phaser.Scene {
     }
 
     if (keySpaceObj.isDown === true && this.player.body.touching.down) {
-      this.player.setVelocityY(-200)
+      this.player.setVelocityY(-400)
     }
   }
 }
