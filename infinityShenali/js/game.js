@@ -30,7 +30,7 @@ const config = {
     default: 'arcade',
     arcade: {
       gravity: { y: 300 },
-      debug: false
+      debug: true
     }
   },
   // Set backgroundColor
@@ -55,8 +55,6 @@ game.scene.add('menuScene2', menuScene2)
 
 // Start title
 //game.scene.start('splashScene')
-//game.scene.start('titleScene')
+game.scene.start('titleScene')
 //game.scene.start('gameScene')
-game.scene.start('gameScene2')
-//game.scene.start('menuScene2')
-//game.scene.start('menuScene')
+//game.scene.start('gameScene2')

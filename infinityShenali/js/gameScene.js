@@ -154,8 +154,8 @@ class GameScene extends Phaser.Scene {
     this.physics.add.collider(this.checkpoint, this.platforms, function() {
       this.checkpoint = true
     }.bind(this))
-
-
+    
+    // collision between portal and platforms
     this.physics.add.collider(this.portal, this.platforms)
 
     // collision between the player and coins

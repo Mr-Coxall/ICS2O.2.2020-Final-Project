@@ -17,11 +17,9 @@ class GameScene2 extends Phaser.Scene {
     this.coin = null
     this.portal = null
     this.spike = null
-    this.checkpoint = false
     this.score = 0
     this.scoreText = null
     this.scoreTextStyle = { font: '45px Fira Sans', fill: '#fff', align: 'center' }
-    this.text1 = null
   }
 
   init (data) {
@@ -39,7 +37,6 @@ class GameScene2 extends Phaser.Scene {
     this.load.image('scene3_coin', './assets/coin.png')
     this.load.image('scene3_spike', './assets/spike.png')
     this.load.image('scene3_ground', './assets/platform.png')
-    this.load.image('scene3_checkpoint', './assets/checkpoint.gif')
     this.load.image('scene3_portal', './assets/portal.gif')
 
     // sound
@@ -157,7 +154,7 @@ class GameScene2 extends Phaser.Scene {
     // collision between spike and coin
     this.physics.add.collider(this.coin, this.spike)
     
-    // collision between spikes and checkpoint and platforms
+    // collision between spikes and platforms
     this.physics.add.collider(this.portal, this.platforms)
 
     // collision between the player and coins
@@ -169,7 +166,7 @@ class GameScene2 extends Phaser.Scene {
 
     //collision between player and portal
     this.physics.add.collider(this.player, this.portal, function() {
-      this.scene.start('menuScene2')
+      this.scene.start('splashScene')
     }.bind(this))
   }
 
