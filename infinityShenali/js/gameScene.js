@@ -140,7 +140,7 @@ class GameScene extends Phaser.Scene {
 
     // collision between player and spikes
     this.physics.add.collider(this.player, this.spike, function() {
-      if (this.checkpoint == false) {
+      if (this.checkpoint === false) {
         this.player.setPosition(100, 199)
       } else {
         this.player.setPosition(1800, 400)
@@ -150,13 +150,14 @@ class GameScene extends Phaser.Scene {
     // collision between spike and coin
     this.physics.add.collider(this.coin, this.spike)
     
-    // collision between spikes and checkpoint and platforms
-    this.physics.add.collider(this.checkpoint, this.platforms, function() {
+    // collision between checkpoint and player
+    this.physics.add.collider(this.checkpoint, this.player, function() {
       this.checkpoint = true
     }.bind(this))
 
-
+    // collision between portal/checkpoint and platforms
     this.physics.add.collider(this.portal, this.platforms)
+    this.physics.add.collider(this.checkpoint, this.platforms)
 
     // collision between the player and coins
     this.physics.add.collider(this.player, this.coin, function(playerCollide, coinCollide) {
